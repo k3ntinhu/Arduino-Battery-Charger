@@ -4,22 +4,33 @@
   07 Jan 2017
 
   --> Requires a Nokia 5110 LCD module connected to:
-     Nokia -> Arduino
-      SCK  -> Pin 2
-      MOSI -> Pin 3
-      DC   -> Pin 5
-      RST  -> Pin 7
-      CS   -> Pin 6
+     (Nokia)  -> Arduino
+     (1) RST  -> Pin 7
+     (2) CE   -> Pin 6  
+     (3) DC   -> Pin 5
+     (4) DIN  -> Pin 3
+     (5) CLK  -> Pin 2
+     (6) VCC  -> 3.3V
+     (7) LGHT -> Pin 8
+     (8) GND  -> GND
 
   --> Requires a SD card read/write attached to SPI bus as follows:
        SDCard -> Arduino
-      ** MOSI -> pin 11
+      ** GND  -> GND
+      ** VCC  -> 5V
       ** MISO -> pin 12
-      ** CLK  -> pin 13
+      ** MOSI -> pin 11
+      ** SCK  -> pin 13
       ** CS   -> pin 4 (for MKRZero SD: SDCARD_SS_PIN)
 
+  --> Requires a TP4056 connected as follows:
+      TP4056 -> Arduino
+      ** In+ -> Analog 0
+      ** In- -> GND
+      ** Bat+ -> Battery Holder +
+      ** Bat- -> Battery Holder -
 
-// font size options: tinyFont 4x6, smallFont 6x8, mediumNumber 12x16, bigNumbers 14x24
+// LCD font size library options: smallFont 6x8, mediumNumber 12x16, bigNumbers 14x24
 
 */
 
